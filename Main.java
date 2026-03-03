@@ -92,6 +92,43 @@ public class Main {
       System.out.println("Test Average: " + avg);
 
 
+      // STANDARD FOR LOOP: when you need to keep
+      // track of the current INDEX (position)
+      // like if you want to use a method (set, get, etc..)
+      for (int i = 0; i < scores.size(); i++ ) {
+         // get item at current index
+         int currentItem = scores.get(i);
+         int curvedScore = currentItem + 100;
+         scores.set(i, curvedScore); // replace item
+      }
+      System.out.println(scores);
+
+
+      // WHILE LOOP (iterate until condition is false)
+      ArrayList<String> groceries = new ArrayList<String>();
+      groceries.add("steak");
+      groceries.add("rice");
+      groceries.add("steak");
+      groceries.add("beans");
+      // guess what this loop is trying to do?
+      boolean found = false;
+      int index = 0;
+      while ( index < groceries.size() ) {
+         if ("steak".equals( groceries.get(index) ) ) {
+            // if current item in list is "steak"
+            groceries.remove(index);
+            found = true;
+
+         }
+         else {
+            index++; // continue through list
+         }
+
+      }
+      System.out.println(groceries);
+
+
+
       
 
 
